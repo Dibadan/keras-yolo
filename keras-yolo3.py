@@ -432,7 +432,7 @@ def detect(yolov3, image_path):
 
     # draw bounding boxes on the image using labels
     draw_boxes(image, boxes, labels, obj_thresh)
-    plt.figure(figsize = (15,10))
+    #plt.figure(figsize = (15,10))
     return image
     #plt.imshow(image)
     # write the image with bounding boxes to file
