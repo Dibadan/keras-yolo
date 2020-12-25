@@ -378,7 +378,6 @@ def load_model(weights_path: str):
     return yolov3
 
 def detect(yolov3, image_path):
-    import matplotlib.pyplot as plt
     """
     Detect objects and apply the yolo3 model
     
