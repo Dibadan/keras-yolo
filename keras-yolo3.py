@@ -9,7 +9,6 @@ from tensorflow.keras.layers import concatenate, add
 from tensorflow.keras.models import Model
 import struct
 import cv2
-import matplotlib.pyplot as plt
 
 #np.set_printoptions(threshold=np.nan)
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
@@ -379,6 +378,7 @@ def load_model(weights_path: str):
     return yolov3
 
 def detect(yolov3, image_path):
+    import matplotlib.pyplot as plt
     """
     Detect objects and apply the yolo3 model
     
@@ -433,7 +433,7 @@ def detect(yolov3, image_path):
 
     # draw bounding boxes on the image using labels
     draw_boxes(image, boxes, labels, obj_thresh)
-    #plt.figure(figsize = (15,10))
+    plt.figure(figsize = (15,10))
     return image
     #plt.imshow(image)
     # write the image with bounding boxes to file
